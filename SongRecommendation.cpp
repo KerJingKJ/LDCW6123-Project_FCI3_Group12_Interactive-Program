@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cctype>
 using namespace std;
 
 int main()
@@ -19,13 +20,47 @@ int main()
         {
             case 1:
             {
-                int moodChoice;
+                char moodChoice;                
+
+            do
+            {
+                
                 cout << "How you feel today?" << endl;
-                cout << "1 - Happy" << endl;
-                cout << "2 - Relaxed" << endl;
-                cout << "3 - Mad" << endl;
-                cout << "4 - Sad" << endl;
+
+                cout << "H - Happy" << endl;
+                cout << "R - Relaxed" << endl;
+                cout << "M - Mad" << endl;
+                cout << "S - Sad" << endl;
                 cin >> moodChoice;
+                moodChoice = toupper(moodChoice);
+                if (moodChoice == 'H')
+                {
+                    cout << "Glad that you are happy! Here are the songs you can listen: " << endl;
+                }
+
+                else if (moodChoice == 'R')
+                {
+                    cout << "Relaxed relaxed" << endl;
+                }
+
+                else if (moodChoice == 'M')
+                {
+                    cout << "Sorry to hear that. I hope these songs can calm you down" << endl;
+                    
+                }
+
+                else if (moodChoice == 'S')
+                {
+                    cout << "Oh no dont be sadd :( I hope these songs can heal you" << endl;
+                }
+
+                else
+                {
+                    cout << "Invalid choice! Please enter again" << endl;
+                }
+
+            }while (moodChoice != 'H' && moodChoice != 'R' && moodChoice != 'M' && moodChoice != 'S');
+                
 
                 
             break;
@@ -42,6 +77,7 @@ int main()
 
             case 3:
             {
+                cout << "Exiting..." << endl;
                 cout << "Bye! Have a nice day ^^" << endl;
             break;
             }
