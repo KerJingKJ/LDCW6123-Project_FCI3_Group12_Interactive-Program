@@ -89,10 +89,61 @@ int main()
 
             case 2:
             {
-                cout << "What song genre you would like to listen?" << endl;
-                // jin han, your part starts below, just list out songs based on genre
+                char genreChoice;
+                do
+                {
+                    cout << endl << "What song genre you would like to listen?" << endl;
+                    cout << "P - Pop" << endl;
+                    cout << "R - Rock" << endl;
+                    cout << "H - Hip Hop" << endl;
+                    cout << "J - Jazz" << endl;
+                    cout << "Your choice (P/R/H/J): ";
+                    cin >> genreChoice;
+                    genreChoice = toupper(genreChoice);
+                    
+                    if (genreChoice == 'P')
+                    {
+                        cout << endl << "Here are some popular Pop songs for you: " << endl;
+                        cout << "1. Blinding Lights by The Weeknd" << endl;
+                        cout << "2. Levitate by Dua Lipa" << endl;
+                        cout << "3. Watermelon Sugar by Harry Styles" << endl;
+                        cout << "4. Shape of You by Ed Sheeran" << endl;
+                        cout << "5. Closer by The Chainsmokers" << endl;
+                    }
+                    else if (genreChoice == 'R')
+                    {
+                        cout << endl << "Here are some classic Rock anthems: " << endl;
+                        cout << "1. Bohemian Rhapsody by Queen" << endl;
+                        cout << "2. Smells Like Teen Spirit by Nirvana" << endl;
+                        cout << "3. Hotel California by Eagles" << endl;
+                        cout << "4. Stairway to Heaven by Led Zeppelin" << endl;
+                        cout << "5. Sweet Child o' Mine by Guns N' Roses" << endl;
+                    }
+                    else if (genreChoice == 'H')
+                    {
+                        cout << endl << "Get ready to groove with these Hip Hop tracks: " << endl;
+                        cout << "1. Lose Yourself by Eminem" << endl;
+                        cout << "2. God's Plan by Drake" << endl;
+                        cout << "3. Humble by Kendrick Lamar" << endl;
+                        cout << "4. Old Town Road by Lil Nas X" << endl;
+                        cout << "5. Hot in Herre by Nelly" << endl;
+                    }
+                    else if (genreChoice == 'J')
+                    {
+                        cout << endl << "Relax and enjoy these Jazz melodies: " << endl;
+                        cout << "1. What a Wonderful World by Louis Armstrong" << endl;
+                        cout << "2. Take Five by Dave Brubeck Quartet" << endl;
+                        cout << "3. Fly Me to the Moon by Frank Sinatra" << endl;
+                        cout << "4. My Favorite Things by John Coltrane" << endl;
+                        cout << "5. At Last by Etta James" << endl;
+                    }
+                    else
+                    {
+                        cout << endl << "Invalid choice! Please enter again." << endl;
+                    }
 
-            
+                } while (genreChoice != 'P' && genreChoice != 'R' && genreChoice != 'H' && genreChoice != 'J');
+
             break;
             }
 
