@@ -9,9 +9,10 @@ int main()
     char repeat;
     cout << "Welcome to Song Recommendation System" << endl;
 
+    // a do-while loop for user to choose method to recommend songs with error handling
     do
     {
-        cout << endl << "How should we recommend songs for you?" << endl;
+        cout << endl << "How should we recommend songs for you?" << endl; 
         cout << "1. By Mood" << endl;
         cout << "2. By Genre" << endl;
         cout << "3. Exit" << endl;
@@ -20,7 +21,7 @@ int main()
 
         switch(choice)
         {
-            case 1:
+            case 1: // first method to recommend songs by mood
             {
                 char moodChoice;                
 
@@ -87,7 +88,7 @@ int main()
             break;
             }
 
-            case 2:
+            case 2: // second method to recommend songs by genre
             {
                 char genreChoice;
                 do
@@ -147,14 +148,14 @@ int main()
             break;
             }
 
-            case 3:
+            case 3: // end the program if user input 3
             {
                 cout << endl << "Exiting..." << endl;
                 cout << "Bye! Have a nice day ^^" << endl;
             break;
             }
 
-            default:
+            default: // repeat the loop if user enters an invalid choice
             {
                 cout << "Invalid choice! Please enter again." << endl;
             break;
@@ -162,19 +163,20 @@ int main()
                 
         }
 
-        if (choice != 3)
+        if (choice != 3) // ask if user want to continue the program 
         {
             cout << endl << "Would you like to continue? (y/n): ";
             cin >> repeat;
             repeat = tolower(repeat);
         }
 
-        if (repeat == 'n')
+        if (repeat == 'n') // terminate the program if user input 'n'
         {
             cout << endl << "Bye! Enjoy your day :)" << endl;
         }
 
-    } while (repeat != 'n' && choice != 3);
+    } while (repeat != 'n' && choice != 3); // repeat the loop if user do not enter 'n' or 3
 
     return 0;
 }
+
